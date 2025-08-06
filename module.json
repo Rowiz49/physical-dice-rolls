@@ -1,9 +1,13 @@
 {
-  "title": "Real Dice - Manual Rolling",
+  "title": "Physical Dice Rolls",
   "description": "This module allows you to roll manually roll dice. Works with any system and should be compatible with automation modules.",
-  "id": "real-dice",
+  "id": "physical-dice-rolls",
   "version": "1.0",
   "authors": [
+    {
+      "name": "Rowiz49",
+      "url": "https://github.com/Rowiz49"
+    },
     {
       "name": "theripper93",
       "email": "tsplab@gmail.com",
@@ -48,16 +52,12 @@
     }
   ],
   "scripts": [],
-  "esmodules": [
-    "index.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
+  "esmodules": ["index.js"],
+  "styles": ["styles/module.css"],
   "packs": [],
-  "url": "https://github.com/theripper93/real-dice",
-  "manifest": "https://github.com/theripper93/real-dice/releases/latest/download/module.json",
-  "download": "https://github.com/theripper93/real-dice/releases/download/1.0/module.zip",
+  "url": "https://github.com/Rowiz49/physical-dice-rolls",
+  "manifest": "",
+  "download": "",
   "relationships": {
     "requires": [
       {
@@ -69,7 +69,6 @@
   },
   "compatibility": {
     "minimum": "10",
-    "verified": "11",
-    "maximum": "11"
+    "verified": "13"
   }
 }
