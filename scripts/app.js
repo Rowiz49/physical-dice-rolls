@@ -104,11 +104,11 @@ export class RealRoll extends FormApplication {
   }
 
   get id() {
-    return RealRoll.APP_ID + randomID();
+    return RealRoll.APP_ID + foundry.utils.randomID();
   }
 
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       id: this.APP_ID,
       template: `modules/${MODULE_ID}/templates/${this.APP_ID}.hbs`,
       popOut: true,
