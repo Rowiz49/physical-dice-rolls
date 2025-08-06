@@ -1,83 +1,83 @@
 {
-    "real-dice": {
-        "buttons": {
-            "realRollToggle": {
-                "tooltips": {
-                    "0": "Modalità lancio manuale: disabilitata<hr> Tutti i tiri saranno automatici.",
-                    "1": "Modalità lancio manuale: abilitata<hr> Tutti i tiri saranno manuali.",
-                    "2": "Modalità rotolo manuale: Chiedi<hr> Ti verrà chiesto se desideri rotolare manualmente o automaticamente."
-                }
-            }
-        },
-        "real-roll": {
-            "realRollMessage": "è rotolato manualmente.",
-            "title": "Dadi veri",
-            "totalBoxMessage": "Inserisci il totale del tiro invece dei singoli risultati."
-        },
-        "settings": {
-            "manualRollMode": {
-                "choices": {
-                    "0": "Mai",
-                    "1": "Sempre",
-                    "2": "Chiedere"
-                },
-                "hint": "Se abilitato, dovrai fare clic sul pulsante di lancio per lanciare i dadi. \nSe disabilitato, i dadi rotoleranno automaticamente quando li rilasci.",
-                "name": "Modalità di scorrimento manuale"
-            },
-            "messageColor": {
-                "hint": "Il colore del messaggio mostrato nella chat al GM quando un giocatore tira manualmente.",
-                "name": "Colore del messaggio"
-            },
-            "showMessage": {
-                "hint": "Se abilitato, verrà mostrato un messaggio nella chat al GM quando un giocatore lancia manualmente.",
-                "name": "Mostra messaggio"
-            },
-            "themeColor": {
-                "hint": "Il colore principale del tema.",
-                "name": "Colore del tema"
-            },
-            "useTheme": {
-                "hint": "Se abilitato, la finestra Real Dice utilizzerà un tema personalizzato",
-                "name": "Usa tema"
-            },
-            "enableTotalBox": {
-                "hint": "Se abilitato verrà mostrata una casella dove inserire il totale del tiro. \nIl modulo genererà quindi un tiro che si aggiungerà a quel totale.",
-                "name": "Abilita casella totale"
-            },
-            "gmOnly": {
-                "hint": "Se abilitato, solo il GM potrà lanciare manualmente.",
-                "name": "Solo GM"
-            },
-            "position": {
-                "choices": {
-                    "chat": "Casella di chat",
-                    "default": "Centro"
-                },
-                "hint": "La posizione della finestra dei dadi reali.",
-                "name": "Posizione"
-            },
-            "disableInCombat": {
-                "hint": "Se abilitato, il modulo verrà disabilitato durante il combattimento.",
-                "name": "Disabilita in combattimento"
-            },
-            "realDiceConfig": {
-                "hint": "Configura quali dadi lanciare manualmente",
-                "label": "Configura",
-                "name": "Configurazione dei dadi"
-            },
-            "showFormula": {
-                "hint": "Se abilitato, la formula del lancio verrà mostrata nella parte superiore della finestra del lancio manuale.",
-                "name": "Mostra la formula"
-            },
-            "showMessagePlayers": {
-                "hint": "Se abilitato, il messaggio verrà mostrato anche ai giocatori.",
-                "name": "Mostra messaggio ai giocatori"
-            }
-        },
-        "keybindings": {
-            "toggleRollMode": {
-                "name": "Attiva/disattiva la modalità di scorrimento manuale"
-            }
+  "physical-dice-rolls": {
+    "buttons": {
+      "realRollToggle": {
+        "tooltips": {
+          "0": "Modalità lancio manuale: disabilitata<hr> Tutti i tiri saranno automatici.",
+          "1": "Modalità lancio manuale: abilitata<hr> Tutti i tiri saranno manuali.",
+          "2": "Modalità rotolo manuale: Chiedi<hr> Ti verrà chiesto se desideri rotolare manualmente o automaticamente."
         }
+      }
+    },
+    "real-roll": {
+      "realRollMessage": "è rotolato manualmente.",
+      "title": "Dadi veri",
+      "totalBoxMessage": "Inserisci il totale del tiro invece dei singoli risultati."
+    },
+    "settings": {
+      "manualRollMode": {
+        "choices": {
+          "0": "Mai",
+          "1": "Sempre",
+          "2": "Chiedere"
+        },
+        "hint": "Se abilitato, dovrai fare clic sul pulsante di lancio per lanciare i dadi. \nSe disabilitato, i dadi rotoleranno automaticamente quando li rilasci.",
+        "name": "Modalità di scorrimento manuale"
+      },
+      "messageColor": {
+        "hint": "Il colore del messaggio mostrato nella chat al GM quando un giocatore tira manualmente.",
+        "name": "Colore del messaggio"
+      },
+      "showMessage": {
+        "hint": "Se abilitato, verrà mostrato un messaggio nella chat al GM quando un giocatore lancia manualmente.",
+        "name": "Mostra messaggio"
+      },
+      "themeColor": {
+        "hint": "Il colore principale del tema.",
+        "name": "Colore del tema"
+      },
+      "useTheme": {
+        "hint": "Se abilitato, la finestra Physical Dice Rolls utilizzerà un tema personalizzato",
+        "name": "Usa tema"
+      },
+      "enableTotalBox": {
+        "hint": "Se abilitato verrà mostrata una casella dove inserire il totale del tiro. \nIl modulo genererà quindi un tiro che si aggiungerà a quel totale.",
+        "name": "Abilita casella totale"
+      },
+      "gmOnly": {
+        "hint": "Se abilitato, solo il GM potrà lanciare manualmente.",
+        "name": "Solo GM"
+      },
+      "position": {
+        "choices": {
+          "chat": "Casella di chat",
+          "default": "Centro"
+        },
+        "hint": "La posizione della finestra dei dadi reali.",
+        "name": "Posizione"
+      },
+      "disableInCombat": {
+        "hint": "Se abilitato, il modulo verrà disabilitato durante il combattimento.",
+        "name": "Disabilita in combattimento"
+      },
+      "realDiceConfig": {
+        "hint": "Configura quali dadi lanciare manualmente",
+        "label": "Configura",
+        "name": "Configurazione dei dadi"
+      },
+      "showFormula": {
+        "hint": "Se abilitato, la formula del lancio verrà mostrata nella parte superiore della finestra del lancio manuale.",
+        "name": "Mostra la formula"
+      },
+      "showMessagePlayers": {
+        "hint": "Se abilitato, il messaggio verrà mostrato anche ai giocatori.",
+        "name": "Mostra messaggio ai giocatori"
+      }
+    },
+    "keybindings": {
+      "toggleRollMode": {
+        "name": "Attiva/disattiva la modalità di scorrimento manuale"
+      }
     }
+  }
 }

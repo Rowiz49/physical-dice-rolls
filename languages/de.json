@@ -1,83 +1,83 @@
 {
-    "real-dice": {
-        "buttons": {
-            "realRollToggle": {
-                "tooltips": {
-                    "0": "Manueller Rollmodus: Deaktiviert<hr> Alle Rollvorgänge erfolgen automatisch.",
-                    "1": "Manueller Rollmodus: Aktiviert<hr> Alle Rollvorgänge erfolgen manuell.",
-                    "2": "Manueller Rollmodus: Fragen<hr> Sie werden gefragt, ob Sie manuell oder automatisch rollen möchten."
-                }
-            }
-        },
-        "real-roll": {
-            "realRollMessage": "wurde manuell gewürfelt.",
-            "title": "Echte Würfel",
-            "totalBoxMessage": "Geben Sie die Gesamtsumme des Wurfs anstelle einzelner Ergebnisse ein."
-        },
-        "settings": {
-            "manualRollMode": {
-                "choices": {
-                    "0": "Niemals",
-                    "1": "Stets",
-                    "2": "Fragen"
-                },
-                "hint": "Wenn diese Option aktiviert ist, müssen Sie auf die Schaltfläche „Würfeln“ klicken, um zu würfeln. \nWenn deaktiviert, würfeln die Würfel automatisch, wenn Sie sie loslassen.",
-                "name": "Manueller Rollmodus"
-            },
-            "messageColor": {
-                "hint": "Die Farbe der Nachricht, die im Chat an den GM angezeigt wird, wenn ein Spieler manuell würfelt.",
-                "name": "Nachrichtenfarbe"
-            },
-            "showMessage": {
-                "hint": "Wenn diese Option aktiviert ist, wird dem GM im Chat eine Nachricht angezeigt, wenn ein Spieler manuell würfelt.",
-                "name": "Zeige Nachricht"
-            },
-            "themeColor": {
-                "hint": "Die Akzentfarbe des Themas.",
-                "name": "Themenfarbe"
-            },
-            "useTheme": {
-                "hint": "Wenn diese Option aktiviert ist, verwendet das Real Dice-Fenster ein benutzerdefiniertes Design",
-                "name": "Verwenden Sie ein Thema"
-            },
-            "enableTotalBox": {
-                "hint": "Wenn aktiviert, wird ein Feld angezeigt, in das Sie die Gesamtsumme des Wurfs eingeben können. \nDas Modul generiert dann einen Wurf, der diese Summe ergibt.",
-                "name": "Gesamtbox ​​aktivieren"
-            },
-            "gmOnly": {
-                "hint": "Wenn diese Option aktiviert ist, kann nur der GM manuell würfeln.",
-                "name": "Nur GM"
-            },
-            "position": {
-                "choices": {
-                    "chat": "Chat Box",
-                    "default": "Center"
-                },
-                "hint": "Die Position des Real Dice-Fensters.",
-                "name": "Position"
-            },
-            "disableInCombat": {
-                "hint": "Wenn aktiviert, wird das Modul während des Kampfes deaktiviert.",
-                "name": "Im Kampf deaktivieren"
-            },
-            "realDiceConfig": {
-                "hint": "Konfigurieren Sie, welche Würfel manuell gewürfelt werden sollen",
-                "label": "Konfigurieren",
-                "name": "Würfelkonfiguration"
-            },
-            "showFormula": {
-                "hint": "Wenn diese Option aktiviert ist, wird die Formel der Rolle oben im manuellen Rollenfenster angezeigt.",
-                "name": "Formel anzeigen"
-            },
-            "showMessagePlayers": {
-                "hint": "Wenn aktiviert, wird die Nachricht auch den Spielern angezeigt.",
-                "name": "Nachricht an Spieler anzeigen"
-            }
-        },
-        "keybindings": {
-            "toggleRollMode": {
-                "name": "Schalten Sie den manuellen Rollmodus um"
-            }
+  "physical-dice-rolls": {
+    "buttons": {
+      "realRollToggle": {
+        "tooltips": {
+          "0": "Manueller Rollmodus: Deaktiviert<hr> Alle Rollvorgänge erfolgen automatisch.",
+          "1": "Manueller Rollmodus: Aktiviert<hr> Alle Rollvorgänge erfolgen manuell.",
+          "2": "Manueller Rollmodus: Fragen<hr> Sie werden gefragt, ob Sie manuell oder automatisch rollen möchten."
         }
+      }
+    },
+    "real-roll": {
+      "realRollMessage": "wurde manuell gewürfelt.",
+      "title": "Echte Würfel",
+      "totalBoxMessage": "Geben Sie die Gesamtsumme des Wurfs anstelle einzelner Ergebnisse ein."
+    },
+    "settings": {
+      "manualRollMode": {
+        "choices": {
+          "0": "Niemals",
+          "1": "Stets",
+          "2": "Fragen"
+        },
+        "hint": "Wenn diese Option aktiviert ist, müssen Sie auf die Schaltfläche „Würfeln“ klicken, um zu würfeln. \nWenn deaktiviert, würfeln die Würfel automatisch, wenn Sie sie loslassen.",
+        "name": "Manueller Rollmodus"
+      },
+      "messageColor": {
+        "hint": "Die Farbe der Nachricht, die im Chat an den GM angezeigt wird, wenn ein Spieler manuell würfelt.",
+        "name": "Nachrichtenfarbe"
+      },
+      "showMessage": {
+        "hint": "Wenn diese Option aktiviert ist, wird dem GM im Chat eine Nachricht angezeigt, wenn ein Spieler manuell würfelt.",
+        "name": "Zeige Nachricht"
+      },
+      "themeColor": {
+        "hint": "Die Akzentfarbe des Themas.",
+        "name": "Themenfarbe"
+      },
+      "useTheme": {
+        "hint": "Wenn diese Option aktiviert ist, verwendet das Physical Dice Rolls-Fenster ein benutzerdefiniertes Design",
+        "name": "Verwenden Sie ein Thema"
+      },
+      "enableTotalBox": {
+        "hint": "Wenn aktiviert, wird ein Feld angezeigt, in das Sie die Gesamtsumme des Wurfs eingeben können. \nDas Modul generiert dann einen Wurf, der diese Summe ergibt.",
+        "name": "Gesamtbox ​​aktivieren"
+      },
+      "gmOnly": {
+        "hint": "Wenn diese Option aktiviert ist, kann nur der GM manuell würfeln.",
+        "name": "Nur GM"
+      },
+      "position": {
+        "choices": {
+          "chat": "Chat Box",
+          "default": "Center"
+        },
+        "hint": "Die Position des Physical Dice Rolls-Fensters.",
+        "name": "Position"
+      },
+      "disableInCombat": {
+        "hint": "Wenn aktiviert, wird das Modul während des Kampfes deaktiviert.",
+        "name": "Im Kampf deaktivieren"
+      },
+      "realDiceConfig": {
+        "hint": "Konfigurieren Sie, welche Würfel manuell gewürfelt werden sollen",
+        "label": "Konfigurieren",
+        "name": "Würfelkonfiguration"
+      },
+      "showFormula": {
+        "hint": "Wenn diese Option aktiviert ist, wird die Formel der Rolle oben im manuellen Rollenfenster angezeigt.",
+        "name": "Formel anzeigen"
+      },
+      "showMessagePlayers": {
+        "hint": "Wenn aktiviert, wird die Nachricht auch den Spielern angezeigt.",
+        "name": "Nachricht an Spieler anzeigen"
+      }
+    },
+    "keybindings": {
+      "toggleRollMode": {
+        "name": "Schalten Sie den manuellen Rollmodus um"
+      }
     }
+  }
 }

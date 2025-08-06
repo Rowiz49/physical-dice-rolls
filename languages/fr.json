@@ -1,83 +1,83 @@
 {
-    "real-dice": {
-        "buttons": {
-            "realRollToggle": {
-                "tooltips": {
-                    "0": "Mode de jet manuel : Désactivé<hr> Tous les jets seront automatiques.",
-                    "1": "Mode de jet manuel : activé<hr> Tous les jets seront manuels.",
-                    "2": "Mode de jet manuel : Demander<hr> Il vous sera demandé si vous souhaitez rouler manuellement ou automatiquement."
-                }
-            }
-        },
-        "real-roll": {
-            "realRollMessage": "a roulé manuellement.",
-            "title": "Real Dice",
-            "totalBoxMessage": "Entrez le total du lancer au lieu des résultats individuels."
-        },
-        "settings": {
-            "manualRollMode": {
-                "choices": {
-                    "0": "Jamais",
-                    "1": "Toujours",
-                    "2": "Demander"
-                },
-                "hint": "Si cette option est activée, vous devrez cliquer sur le bouton Lancer pour lancer les dés. \nSi cette option est désactivée, les dés se lanceront automatiquement lorsque vous les relâcherez.",
-                "name": "Mode de jet manuel"
-            },
-            "messageColor": {
-                "hint": "La couleur du message affiché dans le chat au MJ lorsqu'un joueur roule manuellement.",
-                "name": "Couleur des messages"
-            },
-            "showMessage": {
-                "hint": "Si activé, un message sera affiché dans le chat au MJ lorsqu'un joueur roule manuellement.",
-                "name": "Voir le message"
-            },
-            "themeColor": {
-                "hint": "La couleur d’accent du thème.",
-                "name": "Couleur du thème"
-            },
-            "useTheme": {
-                "hint": "Si elle est activée, la fenêtre Real Dice utilisera un thème personnalisé",
-                "name": "Utiliser le thème"
-            },
-            "enableTotalBox": {
-                "hint": "Si cette option est activée, une boîte s'affichera dans laquelle vous pourrez saisir le total du lancer. \nLe module générera alors un jet qui s'ajoute à ce total.",
-                "name": "Activer la boîte totale"
-            },
-            "gmOnly": {
-                "hint": "Si activé, seul le MJ pourra rouler manuellement.",
-                "name": "GM seulement"
-            },
-            "position": {
-                "choices": {
-                    "chat": "Boîte de discussion",
-                    "default": "Centre"
-                },
-                "hint": "La position de la fenêtre Real Dice.",
-                "name": "Position"
-            },
-            "disableInCombat": {
-                "hint": "Si cette option est activée, le module sera désactivé pendant le combat.",
-                "name": "Désactiver au combat"
-            },
-            "realDiceConfig": {
-                "hint": "Configurer quels dés doivent être lancés manuellement",
-                "label": "Configurer",
-                "name": "Configuration des dés"
-            },
-            "showFormula": {
-                "hint": "Si cette option est activée, la formule du lancer sera affichée en haut de la fenêtre du lancer manuel.",
-                "name": "Montrer la formule"
-            },
-            "showMessagePlayers": {
-                "hint": "Si cette option est activée, le message sera également affiché aux joueurs.",
-                "name": "Afficher le message aux joueurs"
-            }
-        },
-        "keybindings": {
-            "toggleRollMode": {
-                "name": "Basculer le mode de jet manuel"
-            }
+  "physical-dice-rolls": {
+    "buttons": {
+      "realRollToggle": {
+        "tooltips": {
+          "0": "Mode de jet manuel : Désactivé<hr> Tous les jets seront automatiques.",
+          "1": "Mode de jet manuel : activé<hr> Tous les jets seront manuels.",
+          "2": "Mode de jet manuel : Demander<hr> Il vous sera demandé si vous souhaitez rouler manuellement ou automatiquement."
         }
+      }
+    },
+    "real-roll": {
+      "realRollMessage": "a roulé manuellement.",
+      "title": "Physical Dice Rolls",
+      "totalBoxMessage": "Entrez le total du lancer au lieu des résultats individuels."
+    },
+    "settings": {
+      "manualRollMode": {
+        "choices": {
+          "0": "Jamais",
+          "1": "Toujours",
+          "2": "Demander"
+        },
+        "hint": "Si cette option est activée, vous devrez cliquer sur le bouton Lancer pour lancer les dés. \nSi cette option est désactivée, les dés se lanceront automatiquement lorsque vous les relâcherez.",
+        "name": "Mode de jet manuel"
+      },
+      "messageColor": {
+        "hint": "La couleur du message affiché dans le chat au MJ lorsqu'un joueur roule manuellement.",
+        "name": "Couleur des messages"
+      },
+      "showMessage": {
+        "hint": "Si activé, un message sera affiché dans le chat au MJ lorsqu'un joueur roule manuellement.",
+        "name": "Voir le message"
+      },
+      "themeColor": {
+        "hint": "La couleur d’accent du thème.",
+        "name": "Couleur du thème"
+      },
+      "useTheme": {
+        "hint": "Si elle est activée, la fenêtre Physical Dice Rolls utilisera un thème personnalisé",
+        "name": "Utiliser le thème"
+      },
+      "enableTotalBox": {
+        "hint": "Si cette option est activée, une boîte s'affichera dans laquelle vous pourrez saisir le total du lancer. \nLe module générera alors un jet qui s'ajoute à ce total.",
+        "name": "Activer la boîte totale"
+      },
+      "gmOnly": {
+        "hint": "Si activé, seul le MJ pourra rouler manuellement.",
+        "name": "GM seulement"
+      },
+      "position": {
+        "choices": {
+          "chat": "Boîte de discussion",
+          "default": "Centre"
+        },
+        "hint": "La position de la fenêtre Physical Dice Rolls.",
+        "name": "Position"
+      },
+      "disableInCombat": {
+        "hint": "Si cette option est activée, le module sera désactivé pendant le combat.",
+        "name": "Désactiver au combat"
+      },
+      "realDiceConfig": {
+        "hint": "Configurer quels dés doivent être lancés manuellement",
+        "label": "Configurer",
+        "name": "Configuration des dés"
+      },
+      "showFormula": {
+        "hint": "Si cette option est activée, la formule du lancer sera affichée en haut de la fenêtre du lancer manuel.",
+        "name": "Montrer la formule"
+      },
+      "showMessagePlayers": {
+        "hint": "Si cette option est activée, le message sera également affiché aux joueurs.",
+        "name": "Afficher le message aux joueurs"
+      }
+    },
+    "keybindings": {
+      "toggleRollMode": {
+        "name": "Basculer le mode de jet manuel"
+      }
     }
+  }
 }

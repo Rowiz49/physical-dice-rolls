@@ -1,83 +1,83 @@
 {
-    "real-dice": {
-        "buttons": {
-            "realRollToggle": {
-                "tooltips": {
-                    "0": "Modo de rollo manual: Desactivado<hr> Todos los rollos serán automáticos.",
-                    "1": "Modo de rollo manual: habilitado<hr> Todos los rollos serán manuales.",
-                    "2": "Modo de rollo manual: Preguntar<hr> Se le preguntará si desea rodar manual o automáticamente."
-                }
-            }
-        },
-        "real-roll": {
-            "realRollMessage": "ha rodado manualmente.",
-            "title": "Dados reales",
-            "totalBoxMessage": "Ingrese el total de la tirada en lugar de los resultados individuales."
-        },
-        "settings": {
-            "manualRollMode": {
-                "choices": {
-                    "0": "Nunca",
-                    "1": "Siempre",
-                    "2": "Preguntar"
-                },
-                "hint": "Si está habilitado, tendrás que hacer clic en el botón de tirar para tirar los dados. \nSi está desactivado, los dados se lanzarán automáticamente cuando los sueltes.",
-                "name": "Modo de rollo manual"
-            },
-            "messageColor": {
-                "hint": "El color del mensaje que se muestra en el chat al DJ cuando un jugador tira manualmente.",
-                "name": "Color del mensaje"
-            },
-            "showMessage": {
-                "hint": "Si está habilitado, se mostrará un mensaje en el chat al DJ cuando un jugador tire manualmente.",
-                "name": "Mostrar mensaje"
-            },
-            "themeColor": {
-                "hint": "El color de acento del tema.",
-                "name": "Color del tema"
-            },
-            "useTheme": {
-                "hint": "Si está habilitado, la ventana de Real Dice usará un tema personalizado",
-                "name": "Usar tema"
-            },
-            "enableTotalBox": {
-                "hint": "Si está habilitado, se mostrará un cuadro donde podrá ingresar el total del rollo. \nLuego, el módulo generará una tirada que suma ese total.",
-                "name": "Habilitar cuadro total"
-            },
-            "gmOnly": {
-                "hint": "Si está habilitado, solo el DJ podrá realizar tiradas manualmente.",
-                "name": "Sólo GM"
-            },
-            "position": {
-                "choices": {
-                    "chat": "Ventana de chat",
-                    "default": "Centro"
-                },
-                "hint": "La posición de la ventana de Real Dice.",
-                "name": "Posición"
-            },
-            "disableInCombat": {
-                "hint": "Si está habilitado, el módulo se desactivará durante el combate.",
-                "name": "Desactivar en combate"
-            },
-            "realDiceConfig": {
-                "hint": "Configurar qué dados se deben tirar manualmente",
-                "label": "Configurar",
-                "name": "Configuración de dados"
-            },
-            "showFormula": {
-                "hint": "Si está habilitado, la fórmula del rollo se mostrará en la parte superior de la ventana del rollo manual.",
-                "name": "Mostrar fórmula"
-            },
-            "showMessagePlayers": {
-                "hint": "Si está habilitado, el mensaje también se mostrará a los jugadores.",
-                "name": "Mostrar mensaje a los jugadores"
-            }
-        },
-        "keybindings": {
-            "toggleRollMode": {
-                "name": "Alternar modo de giro manual"
-            }
+  "physical-dice-rolls": {
+    "buttons": {
+      "realRollToggle": {
+        "tooltips": {
+          "0": "Modo de tirada manual: Desactivado<hr> Todas las tiradas serán automáticos.",
+          "1": "Modo de tirada manual: habilitado<hr> Todas las tiradas serán manuales.",
+          "2": "Modo de tirada manual: Preguntar<hr> Se le preguntará si desea tirar manual o automáticamente."
         }
+      }
+    },
+    "real-roll": {
+      "realRollMessage": "ha rodado manualmente.",
+      "title": "Dados reales",
+      "totalBoxMessage": "Ingrese el total de la tirada en lugar de los resultados individuales."
+    },
+    "settings": {
+      "manualRollMode": {
+        "choices": {
+          "0": "Nunca",
+          "1": "Siempre",
+          "2": "Preguntar"
+        },
+        "hint": "Si está habilitado, tendrás que hacer clic en el botón de tirar para tirar los dados. \nSi está desactivado, los dados se lanzarán automáticamente cuando los sueltes.",
+        "name": "Modo de tirada manual"
+      },
+      "messageColor": {
+        "hint": "El color del mensaje que se muestra en el chat al DJ cuando un jugador tira manualmente.",
+        "name": "Color del mensaje"
+      },
+      "showMessage": {
+        "hint": "Si está habilitado, se mostrará un mensaje en el chat al DJ cuando un jugador tire manualmente.",
+        "name": "Mostrar mensaje"
+      },
+      "themeColor": {
+        "hint": "El color de acento del tema.",
+        "name": "Color del tema"
+      },
+      "useTheme": {
+        "hint": "Si está habilitado, la ventana de Physical Dice Rolls usará un tema personalizado",
+        "name": "Usar tema"
+      },
+      "enableTotalBox": {
+        "hint": "Si está habilitado, se mostrará un cuadro donde podrá ingresar el total del tirada. \nLuego, el módulo generará una tirada que suma ese total.",
+        "name": "Habilitar cuadro total"
+      },
+      "gmOnly": {
+        "hint": "Si está habilitado, solo el DJ podrá realizar tiradas manualmente.",
+        "name": "Sólo GM"
+      },
+      "position": {
+        "choices": {
+          "chat": "Ventana de chat",
+          "default": "Centro"
+        },
+        "hint": "La posición de la ventana de Physical Dice Rolls.",
+        "name": "Posición"
+      },
+      "disableInCombat": {
+        "hint": "Si está habilitado, el módulo se desactivará durante el combate.",
+        "name": "Desactivar en combate"
+      },
+      "realDiceConfig": {
+        "hint": "Configurar qué dados se deben tirar manualmente",
+        "label": "Configurar",
+        "name": "Configuración de dados"
+      },
+      "showFormula": {
+        "hint": "Si está habilitado, la fórmula de la tirada se mostrará en la parte superior de la ventana de la tirada manual.",
+        "name": "Mostrar fórmula"
+      },
+      "showMessagePlayers": {
+        "hint": "Si está habilitado, el mensaje también se mostrará a los jugadores.",
+        "name": "Mostrar mensaje a los jugadores"
+      }
+    },
+    "keybindings": {
+      "toggleRollMode": {
+        "name": "Alternar modo de giro manual"
+      }
     }
+  }
 }

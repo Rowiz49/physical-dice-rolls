@@ -1,83 +1,83 @@
 {
-    "real-dice": {
-        "buttons": {
-            "realRollToggle": {
-                "tooltips": {
-                    "0": "Modo de rolagem manual: Desativado<hr> Todas as rolagens serão automáticas.",
-                    "1": "Modo de rolagem manual: Habilitado<hr> Todas as rolagens serão manuais.",
-                    "2": "Modo de rolagem manual: Pergunte<hr> Você será perguntado se deseja rolar manualmente ou automaticamente."
-                }
-            }
-        },
-        "real-roll": {
-            "realRollMessage": "rolou manualmente.",
-            "title": "Dados reais",
-            "totalBoxMessage": "Insira o total do lançamento em vez dos resultados individuais."
-        },
-        "settings": {
-            "manualRollMode": {
-                "choices": {
-                    "0": "Nunca",
-                    "1": "Sempre",
-                    "2": "Perguntar"
-                },
-                "hint": "Se ativado, você terá que clicar no botão rolar para lançar os dados. \nSe desativado, os dados rolarão automaticamente quando você os lançar.",
-                "name": "Modo de rolagem manual"
-            },
-            "messageColor": {
-                "hint": "A cor da mensagem mostrada no chat para o GM quando um jogador rola manualmente.",
-                "name": "Cor da mensagem"
-            },
-            "showMessage": {
-                "hint": "Se habilitado, uma mensagem será mostrada no chat para o GM quando um jogador rolar manualmente.",
-                "name": "Mostrar mensagem"
-            },
-            "themeColor": {
-                "hint": "A cor de destaque do tema.",
-                "name": "Cor do tema"
-            },
-            "useTheme": {
-                "hint": "Se ativado, a janela Real Dice usará um tema personalizado",
-                "name": "Usar tema"
-            },
-            "enableTotalBox": {
-                "hint": "Se ativado, será mostrada uma caixa onde você pode inserir o total do lançamento. \nO módulo irá então gerar um lançamento que soma esse total.",
-                "name": "Ativar caixa total"
-            },
-            "gmOnly": {
-                "hint": "Se ativado, apenas o GM poderá rolar manualmente.",
-                "name": "Apenas GM"
-            },
-            "position": {
-                "choices": {
-                    "chat": "Janela de conversa",
-                    "default": "Centro"
-                },
-                "hint": "A posição da janela Dados reais.",
-                "name": "Posição"
-            },
-            "disableInCombat": {
-                "hint": "Se habilitado, o módulo será desabilitado durante o combate.",
-                "name": "Desativar em combate"
-            },
-            "realDiceConfig": {
-                "hint": "Configure quais dados devem ser lançados manualmente",
-                "label": "Configurar",
-                "name": "Configuração de dados"
-            },
-            "showFormula": {
-                "hint": "Se ativado, a fórmula da rolagem será mostrada na parte superior da janela da rolagem manual.",
-                "name": "Mostrar Fórmula"
-            },
-            "showMessagePlayers": {
-                "hint": "Se ativado, a mensagem também será mostrada aos jogadores.",
-                "name": "Mostrar mensagem aos jogadores"
-            }
-        },
-        "keybindings": {
-            "toggleRollMode": {
-                "name": "Alternar modo de rolagem manual"
-            }
+  "physical-dice-rolls": {
+    "buttons": {
+      "realRollToggle": {
+        "tooltips": {
+          "0": "Modo de rolagem manual: Desativado<hr> Todas as rolagens serão automáticas.",
+          "1": "Modo de rolagem manual: Habilitado<hr> Todas as rolagens serão manuais.",
+          "2": "Modo de rolagem manual: Pergunte<hr> Você será perguntado se deseja rolar manualmente ou automaticamente."
         }
+      }
+    },
+    "real-roll": {
+      "realRollMessage": "rolou manualmente.",
+      "title": "Dados reais",
+      "totalBoxMessage": "Insira o total do lançamento em vez dos resultados individuais."
+    },
+    "settings": {
+      "manualRollMode": {
+        "choices": {
+          "0": "Nunca",
+          "1": "Sempre",
+          "2": "Perguntar"
+        },
+        "hint": "Se ativado, você terá que clicar no botão rolar para lançar os dados. \nSe desativado, os dados rolarão automaticamente quando você os lançar.",
+        "name": "Modo de rolagem manual"
+      },
+      "messageColor": {
+        "hint": "A cor da mensagem mostrada no chat para o GM quando um jogador rola manualmente.",
+        "name": "Cor da mensagem"
+      },
+      "showMessage": {
+        "hint": "Se habilitado, uma mensagem será mostrada no chat para o GM quando um jogador rolar manualmente.",
+        "name": "Mostrar mensagem"
+      },
+      "themeColor": {
+        "hint": "A cor de destaque do tema.",
+        "name": "Cor do tema"
+      },
+      "useTheme": {
+        "hint": "Se ativado, a janela Physical Dice Rolls usará um tema personalizado",
+        "name": "Usar tema"
+      },
+      "enableTotalBox": {
+        "hint": "Se ativado, será mostrada uma caixa onde você pode inserir o total do lançamento. \nO módulo irá então gerar um lançamento que soma esse total.",
+        "name": "Ativar caixa total"
+      },
+      "gmOnly": {
+        "hint": "Se ativado, apenas o GM poderá rolar manualmente.",
+        "name": "Apenas GM"
+      },
+      "position": {
+        "choices": {
+          "chat": "Janela de conversa",
+          "default": "Centro"
+        },
+        "hint": "A posição da janela Dados reais.",
+        "name": "Posição"
+      },
+      "disableInCombat": {
+        "hint": "Se habilitado, o módulo será desabilitado durante o combate.",
+        "name": "Desativar em combate"
+      },
+      "realDiceConfig": {
+        "hint": "Configure quais dados devem ser lançados manualmente",
+        "label": "Configurar",
+        "name": "Configuração de dados"
+      },
+      "showFormula": {
+        "hint": "Se ativado, a fórmula da rolagem será mostrada na parte superior da janela da rolagem manual.",
+        "name": "Mostrar Fórmula"
+      },
+      "showMessagePlayers": {
+        "hint": "Se ativado, a mensagem também será mostrada aos jogadores.",
+        "name": "Mostrar mensagem aos jogadores"
+      }
+    },
+    "keybindings": {
+      "toggleRollMode": {
+        "name": "Alternar modo de rolagem manual"
+      }
     }
+  }
 }
