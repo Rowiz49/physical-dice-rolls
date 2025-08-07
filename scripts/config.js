@@ -1,5 +1,5 @@
 import { MODULE_ID } from "./main.js";
-import { _evaluate, toMessage } from "./evaluateRoll.js";
+import { _evaluate } from "./evaluateRoll.js";
 import { getSetting, setSetting } from "./settings.js";
 
 const REAL_ROLL_MODE_ICONS = {
@@ -17,11 +17,13 @@ export function initConfig() {
     "WRAPPER"
   );
 
-  Hooks.on("renderSidebarTab", (app, html, data) => {
-    if (app.tabName !== "chat") return;
+  Hooks.on("renderSidebar", (app, html, data) => {
+    console.log("rendering");
     const gmOnly = getSetting("gmOnly");
     if (gmOnly && !game.user.isGM) return;
-    const controls = html[0].querySelector(".control-buttons");
+    console.log(html);
+    const controls = html.querySelector("#chat > form > div > div");
+    console.log(controls);
     if (!controls) {
       const div = document.createElement("div");
       div.classList.add("control-buttons");
@@ -32,6 +34,7 @@ export function initConfig() {
     rollModeToggleEl.setAttribute("role", "button");
     rollModeToggleEl.setAttribute("tooltip-direction", "UP");
     rollModeToggleEl.classList.add("real-roll-mode-toggle");
+    rollModeToggleEl.classList.add("ui-control");
 
     updateRealRollMode(rollModeToggleEl);
 
@@ -40,7 +43,11 @@ export function initConfig() {
       const realRollMode = (currentRollMode + 1) % 2;
       setSetting("manualRollMode", realRollMode);
     });
-    html[0].querySelector(".control-buttons").prepend(rollModeToggleEl);
+    rollModeToggleEl.style.display = "flex";
+    rollModeToggleEl.style.alignItems = "center";
+    rollModeToggleEl.style.justifyContent = "center";
+
+    html.querySelector("#chat > form > div > div").prepend(rollModeToggleEl);
   });
 
   Hooks.on("renderModuleManagement", (app, html, data) => {
@@ -88,5 +95,5 @@ export function updateRealRollMode(el) {
   el.setAttribute("data-tooltip", tooltipText);
   el.setAttribute("aria-label", tooltipText);
 
-  el.innerHTML = `<i class="${REAL_ROLL_MODE_ICONS[realRollMode]}"></i>`;
+  el.innerHTML = `<div class="${REAL_ROLL_MODE_ICONS[realRollMode]}"></div>`;
 }

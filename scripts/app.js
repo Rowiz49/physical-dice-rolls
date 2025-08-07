@@ -1,6 +1,6 @@
-import { MODULE_ID } from "./main";
-import { getSetting } from "./settings";
-import { RealDiceConfig } from "./realDiceConfig";
+import { getSetting } from "./settings.js";
+import { RealDiceConfig } from "./realDiceConfig.js";
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 
 const DIE_IMAGES = {
   2: "../modules/physical-dice-rolls/assets/two-coins.svg",
@@ -13,7 +13,9 @@ const DIE_IMAGES = {
   default: "../icons/svg/d6-grey.svg",
 };
 
-export class RealRoll extends FormApplication {
+export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
+  static MODULE_ID = "physical-dice-rolls";
+
   constructor(dieTerms, roll) {
     super();
     this.dieTerms = dieTerms;
@@ -57,7 +59,8 @@ export class RealRoll extends FormApplication {
     const traverse = (obj) => {
       if (!obj) return;
       for (const o of obj) {
-        if (o instanceof Die && !o._processing) dieTerms.push(o);
+        if (o instanceof foundry.dice.terms.Die && !o._processing)
+          dieTerms.push(o);
         if ("dice" in o) traverse(o.dice);
       }
     };
@@ -69,34 +72,8 @@ export class RealRoll extends FormApplication {
   }
 
   async prompt() {
-    if (getSetting("manualRollMode") === 2) {
-      const manual = await this.askForManual();
-      if (!manual) {
-        this._resolve(true);
-        return this.promise;
-      }
-    }
     await this.render(true);
     return this.promise;
-  }
-
-  async askForManual() {
-    await new Promise((resolve, reject) => setTimeout(resolve, 200));
-    const res = await Dialog.confirm({
-      title: "Manual Roll",
-      content: "Would you like to roll manually?",
-      yes: () => {
-        return true;
-      },
-      no: () => {
-        return false;
-      },
-      defaultYes: false,
-      close: () => {
-        return false;
-      },
-    });
-    return res;
   }
 
   static get APP_ID() {
@@ -107,52 +84,72 @@ export class RealRoll extends FormApplication {
     return RealRoll.APP_ID + foundry.utils.randomID();
   }
 
-  static get defaultOptions() {
-    return foundry.utils.mergeObject(super.defaultOptions, {
-      id: this.APP_ID,
-      template: `modules/${MODULE_ID}/templates/${this.APP_ID}.hbs`,
-      popOut: true,
-      resizable: false,
+  static DEFAULT_OPTIONS = {
+    id: this.APP_ID,
+    form: {
+      handler: RealRoll.onSubmit,
+      closeOnSubmit: true,
+    },
+    tag: "form",
+    window: {
+      icon: "fas fa-die", // You can now add an icon to the header
+      title: "RealRoll.form.title",
+      resizable: true,
       minimizable: true,
-      title: game.i18n.localize(`${MODULE_ID}.${this.APP_ID}.title`),
-      classes: getSetting("useTheme")
-        ? ["themed-mode", this.APP_ID]
-        : [this.APP_ID],
-    });
+      contentClasses: ["standard-form"],
+    },
+
+    classes: [this.APP_ID],
+  };
+
+  get title() {
+    return game.i18n.localize(`${RealRoll.MODULE_ID}.${this.APP_ID}.title`);
   }
 
-  async getData() {
-    return {
+  static PARTS = {
+    form: {
+      template: `modules/${RealRoll.MODULE_ID}/templates/${this.APP_ID}.hbs`,
+    },
+    footer: {
+      template: "templates/generic/form-footer.hbs",
+    },
+  };
+
+  async _prepareContext(options) {
+    const context = {
       rollFormula: getSetting("showFormula") ? this.roll.formula : null,
       dieTerms: this.dieTerms,
       multiRow: this.dieTerms.length > 1,
+      buttons: [{ type: "submit", icon: "fa-solid fa-check", label: "" }],
     };
+    return context;
   }
 
-  activateListeners(html) {
-    super.activateListeners(html);
-    html = html[0] ?? html;
+  _onRender(context, options) {
+    super._onRender(context, options);
     const defaultPosition = getSetting("position");
-    if (defaultPosition == "chat") {
+
+    if (defaultPosition === "chat") {
       const chat = document.getElementById("chat-log");
-      //position at the bottom left of the chat log
-      const chatRect = chat.getBoundingClientRect();
-      const left =
-        chatRect.left - Math.max(200, this.element[0].offsetWidth) - 10;
-      const top =
-        chatRect.top + chatRect.height - this.element[0].offsetHeight / 2;
-      this.setPosition({
-        left,
-        top,
-      });
+      if (chat) {
+        const chatRect = chat.getBoundingClientRect();
+        const element = this.element;
+
+        // Use offsetWidth/Height directly from DOM element
+        const left = chatRect.left - Math.max(200, element.offsetWidth) - 10;
+        const top = chatRect.top + chatRect.height - element.offsetHeight / 2;
+
+        this.setPosition({ left, top });
+      }
     }
-    //focus the first input
-    const firstInput = html.querySelector("input");
-    firstInput.focus();
+
+    // Focus the first input
+    const firstInput = this.element.querySelector("input");
+    if (firstInput) firstInput.focus();
   }
 
-  async _updateObject(event, formData) {
-    const data = foundry.utils.expandObject(formData);
+  static async onSubmit(event, form, formData) {
+    const data = foundry.utils.expandObject(formData.object);
 
     for (const [key, value] of Object.entries(data)) {
       if (!value.total) continue;
@@ -215,7 +212,7 @@ export class RealRoll extends FormApplication {
       content: `<div class="real-roll-message">${
         game.user.name
       } ${game.i18n.localize(
-        `${MODULE_ID}.${RealRoll.APP_ID}.realRollMessage`
+        `${RealRoll.MODULE_ID}.${RealRoll.APP_ID}.realRollMessage`
       )}</div>`,
       speaker: { alias: "Physical Dice Rolls" },
       whisper: !getSetting("showMessagePlayers")

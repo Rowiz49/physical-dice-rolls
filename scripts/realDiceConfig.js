@@ -1,10 +1,6 @@
 import { MODULE_ID } from "./main.js";
 
 export class RealDiceConfig extends FormApplication {
-  constructor() {
-    super();
-  }
-
   static get APP_ID() {
     return this.name
       .split(/(?=[A-Z])/)
@@ -43,7 +39,6 @@ export class RealDiceConfig extends FormApplication {
 
   activateListeners(html) {
     super.activateListeners(html);
-    html = html[0] ?? html;
   }
 
   async _updateObject(event, formData) {

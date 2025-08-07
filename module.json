@@ -3,6 +3,7 @@
   "description": "This module allows you to roll manually roll dice. Works with any system and should be compatible with automation modules.",
   "id": "physical-dice-rolls",
   "version": "1.0",
+  "library": "false",
   "authors": [
     {
       "name": "Rowiz49",
@@ -14,6 +15,25 @@
       "url": "https://www.patreon.com/theripper93"
     }
   ],
+  "esmodules": ["scripts/main.js"],
+  "styles": ["styles/module.css"],
+  "packs": [],
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "relationships": {
+    "requires": [
+      {
+        "id": "lib-wrapper",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "13"
+  },
   "languages": [
     {
       "lang": "en",
@@ -50,25 +70,5 @@
       "name": "Italiano",
       "path": "languages/it.json"
     }
-  ],
-  "scripts": [],
-  "esmodules": ["index.js"],
-  "styles": ["styles/module.css"],
-  "packs": [],
-  "url": "https://github.com/Rowiz49/physical-dice-rolls",
-  "manifest": "",
-  "download": "",
-  "relationships": {
-    "requires": [
-      {
-        "id": "lib-wrapper",
-        "type": "module",
-        "compatibility": {}
-      }
-    ]
-  },
-  "compatibility": {
-    "minimum": "10",
-    "verified": "13"
-  }
+  ]
 }
