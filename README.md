@@ -10,7 +10,7 @@ This module allows you to roll manually roll dice. Works with any system and sho
 
 ## Acknowledgments
 
-This module is a fork of the now deprecated [Physical Dice Rolls module from theripper93](https://github.com/theripper93/physical-dice-rolls)
+This module is a fork of the now deprecated [Real Dice module from theripper93](https://github.com/theripper93/real-dice)
 
 ## How to use
 
