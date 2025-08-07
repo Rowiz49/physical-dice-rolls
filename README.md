@@ -1,6 +1,12 @@
+![foundry-badge](https://img.shields.io/badge/foundry-v13-informational)
+![Total Downloads](https://img.shields.io/github/downloads/rowiz49/physical-dice-rolls/total?style=for-the-badge)
+![Latest Version Downloads](https://img.shields.io/github/downloads/rowiz49/physical-dice-rolls/latest/total?style=for-the-badge)
+[![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fphysical-dice-rolls&colorB=4aa94a)](https://forge-vtt.com/bazaar#package=physical-dice-rolls)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S1TRVHB)
 # Physical Dice Rolls
 
-This module allows you to roll manually roll dice. Works with any system and should be compatible with automation modules.\
+This module allows you to roll manually roll dice. Works with any system and should be compatible with automation modules.
 
 ## Acknowledgments
 
