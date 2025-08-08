@@ -99,16 +99,16 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
       contentClasses: ["standard-form"],
     },
 
-    classes: [this.APP_ID],
+    classes: [RealRoll.APP_ID],
   };
 
   get title() {
-    return game.i18n.localize(`${RealRoll.MODULE_ID}.${this.APP_ID}.title`);
+    return game.i18n.localize(`${RealRoll.MODULE_ID}.${RealRoll.APP_ID}.title`);
   }
 
   static PARTS = {
     form: {
-      template: `modules/${RealRoll.MODULE_ID}/templates/${this.APP_ID}.hbs`,
+      template: `modules/${RealRoll.MODULE_ID}/templates/${RealRoll.APP_ID}.hbs`,
     },
     footer: {
       template: "templates/generic/form-footer.hbs",

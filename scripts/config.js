@@ -18,12 +18,9 @@ export function initConfig() {
   );
 
   Hooks.on("renderSidebar", (app, html, data) => {
-    console.log("rendering");
     const gmOnly = getSetting("gmOnly");
     if (gmOnly && !game.user.isGM) return;
-    console.log(html);
     const controls = html.querySelector("#chat > form > div > div");
-    console.log(controls);
     if (!controls) {
       const div = document.createElement("div");
       div.classList.add("control-buttons");
