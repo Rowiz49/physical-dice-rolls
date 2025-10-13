@@ -1,4 +1,4 @@
-import { initConfig } from "./config.js";
+import { initConfig, renderToggle } from "./config.js";
 import { registerSettings, getSetting } from "./settings.js";
 import { RealRoll } from "./app.js";
 
@@ -34,4 +34,5 @@ Hooks.on("ready", () => {
       `${MODULE_ID}.toggleRollMode`
     ).restricted = true;
   }
+  renderToggle();
 });
