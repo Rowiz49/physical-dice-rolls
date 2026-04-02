@@ -45,6 +45,8 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
         roll.options?.rollMode ?? game.settings.get("core", "rollMode");
       if (rollRollMode == CONST.DICE_ROLL_MODES.BLIND) return true;
       if (game.combat?.started && getSetting("disableInCombat")) return true;
+      if (game.system.id === "dnd5e" && Object.keys(roll.options).length === 0)
+        return true; // skip non-interactive rolls like tooltip enrichment in DnD5e
       const dieTerms = this.getTermsRecursive(terms);
       if (!dieTerms.length || getSetting("manualRollMode") == 0) return true;
       const realRoll = new RealRoll(dieTerms, roll);
@@ -212,7 +214,7 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
       content: `<div class="real-roll-message">${
         game.user.name
       } ${game.i18n.localize(
-        `${RealRoll.MODULE_ID}.${RealRoll.APP_ID}.realRollMessage`
+        `${RealRoll.MODULE_ID}.${RealRoll.APP_ID}.realRollMessage`,
       )}</div>`,
       speaker: { alias: "Physical Dice Rolls" },
       whisper: !getSetting("showMessagePlayers")
