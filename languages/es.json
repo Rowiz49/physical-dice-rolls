@@ -72,6 +72,10 @@
       "showMessagePlayers": {
         "hint": "Si está habilitado, el mensaje también se mostrará a los jugadores.",
         "name": "Mostrar mensaje a los jugadores"
+      },
+      "autogenerateValues": {
+        "hint": "Si está habilitado, el módulo generará automáticamente valores para los dados en el cuadro de valor. Si está deshabilitado, tendrá que ingresar los valores manualmente.",
+        "name": "Autogenerar valores"
       }
     },
     "keybindings": {

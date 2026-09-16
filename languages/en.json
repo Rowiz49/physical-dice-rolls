@@ -58,6 +58,10 @@
         "name": "Dice Configuration",
         "hint": "Configure which dice should be rolled manually",
         "label": "Configure"
+      },
+      "autogenerateValues": {
+        "name": "Autogenerate Values",
+        "hint": "If enabled, the module will automatically generate values for the dice in the value box. If disabled, you will have to enter the values manually."
       }
     },
     "real-roll": {

@@ -72,6 +72,10 @@
       "showMessagePlayers": {
         "hint": "Wenn aktiviert, wird die Nachricht auch den Spielern angezeigt.",
         "name": "Nachricht an Spieler anzeigen"
+      },
+      "autogenerateValues": {
+        "hint": "Wenn aktiviert, generiert das Modul automatisch Werte für die Würfel im Wertfeld. Wenn deaktiviert, müssen Sie die Werte manuell eingeben.",
+        "name": "Werte automatisch generieren"
       }
     },
     "keybindings": {

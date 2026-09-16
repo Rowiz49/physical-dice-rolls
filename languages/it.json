@@ -72,6 +72,10 @@
       "showMessagePlayers": {
         "hint": "Se abilitato, il messaggio verrà mostrato anche ai giocatori.",
         "name": "Mostra messaggio ai giocatori"
+      },
+      "autogenerateValues": {
+        "hint": "Se abilitato, il modulo genererà automaticamente valori per i dadi nella casella dei valori. Se disabilitato, dovrai inserire i valori manualmente.",
+        "name": "Genera automaticamente i valori"
       }
     },
     "keybindings": {

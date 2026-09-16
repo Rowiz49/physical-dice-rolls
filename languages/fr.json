@@ -72,6 +72,10 @@
       "showMessagePlayers": {
         "hint": "Si cette option est activée, le message sera également affiché aux joueurs.",
         "name": "Afficher le message aux joueurs"
+      },
+      "autogenerateValues": {
+        "hint": "Si activé, le module générera automatiquement des valeurs pour les dés dans la boîte de valeur. Si désactivé, vous devrez entrer les valeurs manuellement.",
+        "name": "Générer automatiquement des valeurs"
       }
     },
     "keybindings": {
