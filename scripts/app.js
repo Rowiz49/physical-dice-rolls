@@ -31,6 +31,11 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
           max: term.number * term.faces,
         };
       }
+      if (getSetting("autogenerateValues")) {
+        term.autoValues = RealRoll.randomizeDieValues(term.number, term.faces);
+        term.totalInputAutoValue = term.autoValues.reduce((a, b) => a + b, 0);
+      }
+      
       term.index = this.dieTerms.indexOf(term);
     });
     this.promise = new Promise((resolve, reject) => {
@@ -43,7 +48,7 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
     try {
       const rollRollMode =
         roll.options?.rollMode ?? game.settings.get("core", "rollMode");
-      if (rollRollMode == CONST.DICE_ROLL_MODES.BLIND) return true;
+      if (rollRollMode == "blind") return true;
       if (game.combat?.started && getSetting("disableInCombat")) return true;
       if (game.system.id === "dnd5e" && Object.keys(roll.options).length === 0)
         return true; // skip non-interactive rolls like tooltip enrichment in DnD5e
@@ -226,5 +231,13 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
   async close(...args) {
     this._resolve(true);
     return super.close(...args);
+  }
+
+  static randomizeDieValues(number, faces) {
+    const values = [];
+    for (let i = 0; i < number; i++) {
+      values.push(Math.floor(Math.random() * faces) + 1);
+    }
+    return values;
   }
 }

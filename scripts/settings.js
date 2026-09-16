@@ -77,6 +77,14 @@ export function registerSettings() {
       type: Boolean,
       default: false,
     },
+    autogenerateValues: {
+      name: `${MODULE_ID}.settings.autogenerateValues.name`,
+      hint: `${MODULE_ID}.settings.autogenerateValues.hint`,
+      scope: "client",
+      config: true,
+      type: Boolean,
+      default: false,
+    },
   };
 
   registerSettingsArray(settings);
