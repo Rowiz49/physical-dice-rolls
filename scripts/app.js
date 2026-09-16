@@ -32,8 +32,10 @@ export class RealRoll extends HandlebarsApplicationMixin(ApplicationV2) {
         };
       }
       if (getSetting("autogenerateValues")) {
-        term.values = randomizeDieValues(term.number, term.faces);
+        term.autoValues = RealRoll.randomizeDieValues(term.number, term.faces);
+        term.totalInputAutoValue = term.autoValues.reduce((a, b) => a + b, 0);
       }
+      
       term.index = this.dieTerms.indexOf(term);
     });
     this.promise = new Promise((resolve, reject) => {
